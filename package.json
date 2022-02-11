@@ -5,8 +5,8 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "build:client": "cd server && npm run test",
-    "build:server": "cd server && npm run test",
+    "build:client": "cd server && npm run build",
+    "build:server": "cd server && npm run build",
     "build": "concurrently \"npm run build:server\"",
     "install:client": "cd client && npm i",
     "install:server": "cd server && npm i",
