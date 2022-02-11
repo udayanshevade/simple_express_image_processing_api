@@ -5,3 +5,5 @@ package-lock.json
 server/node_modules
 server/dist
 server/package-lock.json
+server/images/**/*.*
+!server/images/full/test.jpeg
