@@ -28,6 +28,18 @@ Runs build script:
 npm run build
 ```
 
+# API
+
+_TODO: replace with swagger docs_
+
+### [GET] api/images/process
+
+Parameters:
+
+- **filename\*** - name of the file to process the image
+- **width\*** - desired width dimension
+- **height\*** - desired height dimension
+
 # Dependencies
 
 - [Typescript](https://www.typescriptlang.org/docs/)
@@ -37,6 +49,6 @@ npm run build
 - [Express.js](https://expressjs.com/)
 - [Jasmine](https://jasmine.github.io/pages/docs_home.html)
 
-# TODO:
+## TODO:
 
 - Client for showing, editing and uploading images
