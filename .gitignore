@@ -7,3 +7,5 @@ server/dist
 server/package-lock.json
 server/images/**/*.*
 !server/images/full/test.jpeg
+!server/images/full/README.md
+!server/images/thumb/README.md
