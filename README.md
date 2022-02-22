@@ -4,28 +4,40 @@ Simple image processing api project.
 
 # Scripts
 
-Install dependencies:
+Please install dependencies first with:
 
 ```
-npm run install:all
+yarn run install:all
 ```
 
 Runs dev server and hosts the app locally:
 
 ```
-npm run start
+yarn run start
 ```
 
 Runs defined tests:
 
 ```
-npm run test
+yarn run test
 ```
 
 Runs build script:
 
 ```
-npm run build
+yarn run build
+```
+
+Runs linter:
+
+```
+yarn run lint
+```
+
+Runs prettier:
+
+```
+yarn run prettier
 ```
 
 # API
