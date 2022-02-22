@@ -40,6 +40,8 @@ Parameters:
 - **width\*** - desired width dimension
 - **height\*** - desired height dimension
 
+Example: http://localhost:3000/api/images/process?filename=test&width=300&height=300
+
 # Dependencies
 
 - [Typescript](https://www.typescriptlang.org/docs/)
