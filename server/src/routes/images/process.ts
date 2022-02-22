@@ -67,7 +67,7 @@ imageProcessing.get(
     }
 
     // get resized thumb image if it has already been processed
-    const outputPath = pathUtils.getProcessedThumbPath(filename, ext);
+    const outputPath = pathUtils.getProcessedThumbPath(filename, options, ext);
     let image = await getImageIfExists(outputPath);
     if (image) {
       console.log('Returning cached resized image');

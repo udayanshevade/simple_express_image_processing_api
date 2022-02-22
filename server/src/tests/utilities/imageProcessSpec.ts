@@ -53,7 +53,7 @@ describe('processImage', () => {
 
   it('processes an image', async () => {
     const options = { width: 250, height: 250 };
-    const thumbPath = pathUtils.getProcessedThumbPath(testFilename);
+    const thumbPath = pathUtils.getProcessedThumbPath(testFilename, options);
     await utils.processImage(testFilename, options);
     const image = await utils.getImage(thumbPath);
     expect(image).toBeDefined();

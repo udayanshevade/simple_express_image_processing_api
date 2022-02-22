@@ -11,8 +11,9 @@ describe('getImagePath', () => {
 describe('getThumbPath', () => {
   it('gets the output thumb image path', () => {
     const name = 'test';
-    expect(utils.getProcessedThumbPath(name)).toContain(
-      '/images/thumb/test.jpeg'
+    const options = { width: 300, height: 300 };
+    expect(utils.getProcessedThumbPath(name, options)).toContain(
+      '/images/thumb/test_300_300.jpeg'
     );
   });
 });

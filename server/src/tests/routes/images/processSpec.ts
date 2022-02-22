@@ -57,6 +57,7 @@ describe('images router', () => {
       });
 
       it('if proper dimensions are specified', async () => {
+        const options = { width: 300, height: 300 };
         const query = new URLSearchParams({
           filename: testFilename,
           width: '300',
@@ -67,11 +68,9 @@ describe('images router', () => {
 
         expect(res.status).toBe(200);
         expect(res.type).toBe('image/jpeg');
-        expect(sizeOf(res.body)).toEqual(
-          jasmine.objectContaining({ height: 300, width: 300 })
-        );
+        expect(sizeOf(res.body)).toEqual(jasmine.objectContaining(options));
 
-        await fs.rm(pathUtils.getProcessedThumbPath(testFilename));
+        await fs.rm(pathUtils.getProcessedThumbPath(testFilename, options));
       });
     });
   });

@@ -18,7 +18,7 @@ export const processImage = async (
 
   try {
     const srcPath = pathUtils.getUploadedImagePath(filename, ext);
-    const outputPath = pathUtils.getProcessedThumbPath(filename, ext);
+    const outputPath = pathUtils.getProcessedThumbPath(filename, options, ext);
     const image = await fs.readFile(srcPath);
 
     await sharp(image).resize(width, height).toFile(outputPath);
