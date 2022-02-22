@@ -5,8 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "npx tsc",
-    "lint": "eslint 'index.js'",
-    "prettier": "prettier --config .prettierrc '*.ts' --write",
+    "lint": "eslint 'src/index.ts'",
+    "prettier": "prettier --config .prettierrc '**/*.ts' --write",
     "start": "nodemon src/index.ts",
     "test": "npm run build && cross-env ENV=test jasmine"
   },
