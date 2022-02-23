@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "npx tsc",
-    "lint": "eslint 'src/index.ts'",
+    "lint": "eslint 'src/**/*.ts'",
     "prettier": "prettier --config .prettierrc '**/*.ts' --write",
     "start": "nodemon src/index.ts",
     "test": "npm run build && cross-env ENV=test jasmine"
