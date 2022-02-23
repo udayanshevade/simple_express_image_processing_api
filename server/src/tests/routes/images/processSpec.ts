@@ -27,7 +27,9 @@ describe('images router', () => {
       const res = await request.get(`/api/images/process?${query}`)
       expect(res.status).toBe(404)
       expect(res.body.error).toContain('invalid file: ')
-      expect(res.body.error).toContain('/images/full/nonexistent.jpeg')
+      expect(res.body.error).toMatch(
+        /[/\\]+images[/\\]+full[/\\]+nonexistent.jpeg/
+      )
     })
 
     it('returns existing image if no dimensions are specified', async () => {
