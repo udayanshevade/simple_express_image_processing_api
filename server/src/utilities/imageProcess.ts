@@ -74,3 +74,14 @@ export const getImageIfExists = async (filepath: string) => {
   if (!fileExists) return null
   return getImage(filepath)
 }
+
+/**
+ * Ensure that the right dimensions are provided
+ * @param options - image resize options
+ * @returns valid
+ */
+export const validateOptions = (options: ImageResizeOptions): boolean => {
+  const width = Number(options.width)
+  const height = Number(options.height)
+  return !isNaN(width) && !isNaN(height) && width > 0 && height > 0
+}

@@ -4,6 +4,7 @@ import {
   getImage,
   getImageIfExists,
   processImage,
+  validateOptions,
 } from '../../utilities/imageProcess'
 import * as pathUtils from '../../utilities/paths'
 
@@ -44,8 +45,8 @@ imageProcessing.get(
     }
 
     // just send back the unprocessed image if no target dimensions are provided
-    if (!options.width || !options.height) {
-      console.log('No resize dimensions specified, returning src image')
+    if (!validateOptions(options)) {
+      console.log('Invalid options specified, returning src image')
       const unprocessedImage = await getImage(srcPath)
 
       // unexpected error, file should exist

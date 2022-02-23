@@ -2,6 +2,7 @@ import { promises as fs } from 'fs'
 import sizeOf from 'image-size'
 import * as utils from '../../utilities/imageProcess'
 import * as pathUtils from '../../utilities/paths'
+import { ImageResizeOptions } from '../../utilities/types'
 
 describe('doesFileExist', () => {
   it('identifies an existing file', async () => {
@@ -60,5 +61,15 @@ describe('processImage', () => {
     // eslint-disable-next-line
     expect(sizeOf(image!)).toEqual(jasmine.objectContaining(options))
     await fs.rm(thumbPath)
+  })
+})
+
+describe('validateOptions', () => {
+  it('identifies if options are invalid', () => {
+    expect(utils.validateOptions({ width: -1, height: -1 })).toBe(false)
+    expect(utils.validateOptions({ width: 1, height: 1 })).toBe(true)
+    expect(utils.validateOptions({ height: 1 } as ImageResizeOptions)).toBe(
+      false
+    )
   })
 })
